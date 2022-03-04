@@ -1,4 +1,5 @@
 const express = require('express');
+const { route } = require('express/lib/application');
 const router = express.Router();
 
 const authorController= require("../controllers/authorController")
@@ -22,6 +23,9 @@ router.post("/createBook", bookController.createBook  )
 
 router.get("/getBooksData", bookController.getBooksData)
 
+router.put("/updateHardCover", bookController.updateHardCover)
+
+router.put("/updatePrice", bookController.updatePrice)
 
 
 module.exports = router
